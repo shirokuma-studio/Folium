@@ -1,5 +1,6 @@
 import discord
 from discord.ext import commands
+from discord import app_commands # app_commandsをインポート
 import os
 
 # 環境変数からトークンを読み込む
@@ -12,7 +13,8 @@ class MyBot(commands.Bot):
         intents.message_content = True # メッセージ内容を読み取るために必要
         intents.guilds = True # ギルド情報を取得するために必要
 
-        super().__init__(command_prefix='!', intents=intents)
+        super().__init__(command_prefix='!', intents=intents) # プレフィックスは残しておくが、スラッシュコマンドがメイン
+        self.tree = app_commands.CommandTree(self) # CommandTreeを初期化
         self.initial_extensions = [
             "cogs.ping",
         ]
@@ -21,6 +23,7 @@ class MyBot(commands.Bot):
         # ここでCogをロードする
         for extension in self.initial_extensions:
             await self.load_extension(extension)
+        await self.tree.sync() # スラッシュコマンドを同期
         print(f"Logged in as {self.user} (ID: {self.user.id})")
         print("------")
 
