@@ -55,5 +55,16 @@
   "error_missing_permissions": "คุณไม่มีสิทธิ์ในการรันคำสั่งนี้",
   "error_bot_missing_permissions": "บอทไม่มีสิทธิ์ในการรันคำสั่งนี้",
   "error_command_on_cooldown": "คำสั่งนี้อยู่ในช่วงคูลดาวน์ โปรดรอ {retry_after:.2f} วินาที",
-  "error_unexpected": "เกิดข้อผิดพลาดที่ไม่คาดคิด โปรดติดต่อผู้พัฒนา"
+  "error_unexpected": "เกิดข้อผิดพลาดที่ไม่คาดคิด โปรดติดต่อผู้พัฒนา",
+
+  "ask_command_name": "ถาม",
+  "ask_command_description": "ถามคำถามกับ Gemini 2.5 Pro.",
+  "ask_option_question_description": "คำถามที่คุณต้องการถาม.",
+  "ask_error_response": "เกิดข้อผิดพลาดขณะประมวลผลคำถามของคุณ โปรดลองอีกครั้งในภายหลัง.",
+
+  "imagine_command_name": "จินตนาการ",
+  "imagine_command_description": "สร้างภาพโดยใช้ Imagen 4.",
+  "imagine_option_prompt_description": "ข้อความแจ้งสำหรับการสร้างภาพ.",
+  "imagine_success_response": "นี่คือภาพของคุณตามข้อความแจ้ง: {prompt}",
+  "imagine_error_response": "เกิดข้อผิดพลาดขณะสร้างภาพ โปรดลองอีกครั้งในภายหลัง."
 }

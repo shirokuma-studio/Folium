@@ -55,5 +55,16 @@
   "error_missing_permissions": "У вас нет разрешения на выполнение этой команды.",
   "error_bot_missing_permissions": "У бота нет разрешения на выполнение этой команды.",
   "error_command_on_cooldown": "Эта команда находится на перезарядке. Подождите {retry_after:.2f} секунд.",
-  "error_unexpected": "Произошла непредвиденная ошибка. Обратитесь к разработчику."
+  "error_unexpected": "Произошла непредвиденная ошибка. Обратитесь к разработчику.",
+
+  "ask_command_name": "спросить",
+  "ask_command_description": "Задает вопрос Gemini 2.5 Pro.",
+  "ask_option_question_description": "Вопрос, который вы хотите задать.",
+  "ask_error_response": "Произошла ошибка при обработке вашего вопроса. Пожалуйста, попробуйте еще раз позже.",
+
+  "imagine_command_name": "представить",
+  "imagine_command_description": "Генерирует изображение с помощью Imagen 4.",
+  "imagine_option_prompt_description": "Подсказка для генерации изображения.",
+  "imagine_success_response": "Вот ваше изображение на основе подсказки: {prompt}",
+  "imagine_error_response": "Произошла ошибка при генерации изображения. Пожалуйста, попробуйте еще раз позже."
 }

@@ -55,5 +55,16 @@
   "error_missing_permissions": "このコマンドを実行する権限がありません。",
   "error_bot_missing_permissions": "ボットにこのコマンドを実行するための権限がありません。",
   "error_command_on_cooldown": "このコマンドはクールダウン中です。あと {retry_after:.2f} 秒待ってください。",
-  "error_unexpected": "予期せぬエラーが発生しました。開発者に連絡してください。"
+  "error_unexpected": "予期せぬエラーが発生しました。開発者に連絡してください。",
+
+  "ask_command_name": "質問",
+  "ask_command_description": "Gemini 2.5 Proに質問します。",
+  "ask_option_question_description": "質問したい内容です。",
+  "ask_error_response": "質問の処理中にエラーが発生しました。後でもう一度お試しください。",
+
+  "imagine_command_name": "画像生成",
+  "imagine_command_description": "Imagen 4を使用して画像を生成します。",
+  "imagine_option_prompt_description": "画像生成のためのプロンプトです。",
+  "imagine_success_response": "プロンプトに基づいて画像を生成しました: {prompt}",
+  "imagine_error_response": "画像の生成中にエラーが発生しました。後でもう一度お試しください。"
 }

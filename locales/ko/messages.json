@@ -55,5 +55,16 @@
   "error_missing_permissions": "이 명령어를 실행할 권한이 없습니다.",
   "error_bot_missing_permissions": "봇에 이 명령어를 실행할 권한이 없습니다.",
   "error_command_on_cooldown": "이 명령어는 쿨다운 중입니다. {retry_after:.2f}초 후에 다시 시도해주세요.",
-  "error_unexpected": "예기치 않은 오류가 발생했습니다. 개발자에게 문의해주세요."
+  "error_unexpected": "예기치 않은 오류가 발생했습니다. 개발자에게 문의해주세요.",
+
+  "ask_command_name": "질문",
+  "ask_command_description": "Gemini 2.5 Pro에게 질문합니다.",
+  "ask_option_question_description": "질문할 내용입니다.",
+  "ask_error_response": "질문 처리 중 오류가 발생했습니다. 나중에 다시 시도해주세요.",
+
+  "imagine_command_name": "이미지생성",
+  "imagine_command_description": "Imagen 4를 사용하여 이미지를 생성합니다.",
+  "imagine_option_prompt_description": "이미지 생성을 위한 프롬프트입니다.",
+  "imagine_success_response": "프롬프트에 따라 이미지를 생성했습니다: {prompt}",
+  "imagine_error_response": "이미지 생성 중 오류가 발생했습니다. 나중에 다시 시도해주세요."
 }

@@ -55,5 +55,16 @@
   "error_missing_permissions": "You do not have permission to run this command.",
   "error_bot_missing_permissions": "The bot does not have permission to run this command.",
   "error_command_on_cooldown": "This command is on cooldown. Please wait {retry_after:.2f} seconds.",
-  "error_unexpected": "An unexpected error occurred. Please contact the developer."
+  "error_unexpected": "An unexpected error occurred. Please contact the developer.",
+
+  "ask_command_name": "ask",
+  "ask_command_description": "Asks a question to Gemini 2.5 Pro.",
+  "ask_option_question_description": "The question you want to ask.",
+  "ask_error_response": "An error occurred while processing your question. Please try again later.",
+
+  "imagine_command_name": "imagine",
+  "imagine_command_description": "Generates an image using Imagen 4.",
+  "imagine_option_prompt_description": "The prompt for image generation.",
+  "imagine_success_response": "Here is your image based on the prompt: {prompt}",
+  "imagine_error_response": "An error occurred while generating the image. Please try again later."
 }

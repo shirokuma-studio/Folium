@@ -6,7 +6,7 @@ import yaml
 import logging
 import logging.handlers
 import json
-from dotenv import load_dotenv # load_dotenvをインポート
+from dotenv import load_dotenv
 
 from database import Database
 
@@ -27,7 +27,27 @@ formatter = logging.Formatter('[{asctime}] [{levelname:<8}] {name}: {message}', 
 handler.setFormatter(formatter)
 logger.addHandler(handler)
 
-TOKEN = os.getenv('DISCORD_BOT_TOKEN')
+# auth.jsonから認証情報を読み込む
+try:
+    with open('auth.json', 'r', encoding='utf-8') as f:
+        auth_data = json.load(f)
+    TOKEN = auth_data.get("discord_token")
+    vertex_ai_credentials_path = auth_data.get("vertex_ai_credentials_path")
+
+    if vertex_ai_credentials_path:
+        # GOOGLE_APPLICATION_CREDENTIALS 環境変数を設定
+        # 絶対パスに変換して設定
+        os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = os.path.abspath(vertex_ai_credentials_path)
+        logger.info(f"GOOGLE_APPLICATION_CREDENTIALS set to {os.environ['GOOGLE_APPLICATION_CREDENTIALS']}")
+    else:
+        logger.warning("vertex_ai_credentials_path not found in auth.json. Vertex AI commands might not work without proper authentication.")
+
+except FileNotFoundError:
+    logger.error("Error: auth.json not found. Please create it with your Discord token and Vertex AI credentials path.")
+    TOKEN = None # 続行不可
+except json.JSONDecodeError:
+    logger.error("Error: auth.json is not a valid JSON file.")
+    TOKEN = None
 
 with open('config.yaml', 'r', encoding='utf-8') as f:
     config = yaml.safe_load(f)
@@ -95,6 +115,7 @@ class MyBot(commands.Bot):
             "cogs.settings",
             "cogs.interactive_ui",
             "cogs.tasks",
+            "cogs.ai_commands", # AIコマンドCogを追加
         ]
 
         # データベース接続情報を取得し、Databaseインスタンスを作成
